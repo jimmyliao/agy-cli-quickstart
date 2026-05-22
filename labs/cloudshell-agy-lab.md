@@ -6,7 +6,7 @@
 
 ---
 
-## ⚠️ 給 Jimmy 上場前確認的 TODO
+## ⚠️ 開始前需確認
 
 - [x] **官方安裝指令確認**（5/22 21:00 antigravity.google/download）：`curl -fsSL https://antigravity.google/cli/install.sh | bash`
   目前已知頁面：<https://antigravity.google/docs/cli-using>
