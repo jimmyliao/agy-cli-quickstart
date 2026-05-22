@@ -1,52 +1,70 @@
-# BWAI Tainan 2026-05-23 — Vibe Coding × Antigravity Ecosystem
+# agy-cli-quickstart
 
-**Speaker**: Jimmy Liao (Google AI GDE, Taiwan)
-**Date**: 2026-05-23 13:00
-**Event**: [GDG Tainan — Build with AI](https://gdg.community.dev/events/details/google-gdg-tainan-presents-build-with-ai-x-wu-yue-chang-tan-suo-vibe-coding-yu-google-gemini-de-wu-xian-ke-neng/)
-**Predecessor**: [BwAI Taichung 5/9](https://bwai0509.web.app/)
+> Hands-on materials for Google **Antigravity CLI** (`agy`) — the terminal-first coding agent that's succeeding `gemini-cli` from 2026-06-18.
 
-## Structure (75 min)
+**Maintainer**: [Jimmy Liao](https://github.com/jimmyliao) · Google AI GDE (Taiwan)
+**Status**: living repo — first content is the 2026-05-23 BWAI Tainan workshop, more to come.
 
-| Part | Topic | Duration | Type |
-|------|-------|----------|------|
-| 1 | Opening + What's New since 5/9 | 5 min | Talk |
-| 2 | Antigravity CLI 入門 | 30 min | **Cloud Shell hands-on** |
-| 3 | OpenAB × agy / gemini Live Demo | 25 min | **Instructor demo** |
-| 4 | ADK Pattern (5/9 reuse, simplified) | 8 min | Talk + diagram |
-| 5 | GEAP Pointer | 3 min | Talk |
-| 6 | Q&A + Community | 4 min | Open |
+---
 
-## Story Arc
+## What is `agy`?
 
-```
-5/19  Google blog: Gemini CLI 6/18 sunset
-5/20  Community: GitHub issue #31 — Antigravity CLI ACP feature request
-5/21  Community: OpenAB PR #863 (Node.js wrapper) rejected
-5/22  Jimmy's GDE comment on issue #31 (02:00)
-5/22  Pahud merges PR #896 — agy-acp Rust adapter (11:51)
-5/23  ⭐ This workshop
+`agy` is the standalone Antigravity CLI from Google — a terminal-first coding agent (think `claude` / `codex` for Google's ecosystem). Install once:
+
+```bash
+# macOS / Linux / Cloud Shell
+curl -fsSL https://antigravity.google/cli/install.sh | bash
+
+# Windows PowerShell
+irm https://antigravity.google/cli/install.ps1 | iex
 ```
 
-## Folder Layout
+Official download page: <https://antigravity.google/download>
+
+Key flags to know:
+- `agy -p "prompt"` — non-interactive print mode (great for scripts & CI)
+- `agy -i` — interactive with an initial prompt
+- `agy -c` — continue the most recent conversation
+- `agy --sandbox` — terminal restrictions (safer for experiments)
+- `agy --dangerously-skip-permissions` — auto-approve all tool calls (unattended automation)
+
+## Why this repo?
+
+Three pain points it solves:
+
+1. **Migration from `gemini-cli`** — Pro/Ultra free tier sunsets 2026-06-18; `agy` is the official successor. This repo shows side-by-side command translations.
+2. **Cloud Shell quickstart** — get from zero to first `agy` chat in 5 minutes with no local install.
+3. **Ecosystem integrations** — how `agy` fits into Discord/Slack brokers (OpenAB), IDEs (Zed via ACP), and multi-agent stacks (ADK).
+
+## Repo Layout
 
 ```
 .
-├── outline.md                          # Master deck plan
-├── slides/                             # Marp-compatible markdown
-│   ├── part1-opening.md
-│   ├── part2-agy-intro.md
-│   ├── part3-openab-demo.md
-│   ├── part4-adk-reuse.md
-│   ├── part5-geap-pointer.md
-│   └── partN-speaker-notes.md          # 繁中講者稿 per part
-├── labs/
-│   └── cloudshell-agy-lab.md           # Student handout (Cloud Shell)
-├── demos/
-│   ├── openab-demo-script.md           # Part 3 instructor demo script
-│   └── openab-fallback-prerecord.md    # Fallback plan
-└── assets/                             # Screenshots / diagrams (TBD)
+├── README.md                              ← you are here
+└── events/
+    └── bwai-tainan-2026-05-23/            ← first workshop materials
+        ├── outline.md                     ← 75-min agenda
+        ├── slides/                        ← 5 parts, Marp-compatible markdown
+        ├── labs/                          ← Cloud Shell student handout
+        ├── demos/                         ← OpenAB live demo script + fallback
+        └── assets/                        ← screenshots / diagrams
 ```
+
+## Events
+
+| Date | City | Event | Folder |
+|------|------|-------|--------|
+| 2026-05-23 | Tainan | [BWAI Tainan](https://gdg.community.dev/events/details/google-gdg-tainan-presents-build-with-ai-x-wu-yue-chang-tan-suo-vibe-coding-yu-google-gemini-de-wu-xian-ke-neng/) | [`events/bwai-tainan-2026-05-23/`](events/bwai-tainan-2026-05-23/) |
+
+## Related links
+
+- Google blog — [Gemini CLI → Antigravity CLI transition](https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/)
+- [`google-antigravity/antigravity-cli`](https://github.com/google-antigravity/antigravity-cli) — official source repo
+- Community issue tracking ACP support — [issue #31](https://github.com/google-antigravity/antigravity-cli/issues/31)
+- [OpenAB](https://github.com/openabdev/openab) — chat-platform agent broker; `agy-acp` adapter merged in [PR #896](https://github.com/openabdev/openab/pull/896) on 2026-05-22
+- Predecessor talk — [BwAI Taichung 2026-05-09](https://bwai0509.web.app/)
 
 ## License
 
-CC BY 4.0 — adapt freely, attribute Jimmy Liao.
+Content: **CC BY 4.0** — adapt freely, attribute Jimmy Liao.
+Code snippets: **MIT** unless otherwise noted.
