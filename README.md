@@ -41,20 +41,19 @@ Three pain points it solves:
 ```
 .
 ├── README.md                              ← you are here
-└── events/
-    └── bwai-tainan-2026-05-23/            ← first workshop materials
-        ├── outline.md                     ← 75-min agenda
-        ├── slides/                        ← 5 parts, Marp-compatible markdown
-        ├── labs/                          ← Cloud Shell student handout
-        ├── demos/                         ← OpenAB live demo script + fallback
-        └── assets/                        ← screenshots / diagrams
+└── labs/
+    └── cloudshell-agy-lab.md              ← 7-step Cloud Shell hands-on
 ```
 
-## Events
+Future content (planned):
+- `migration/gemini-to-agy.md` — side-by-side cheatsheet
+- `examples/` — CI / cron / multi-agent integration snippets
 
-| Date | City | Event | Folder |
-|------|------|-------|--------|
-| 2026-05-23 | Tainan | [BWAI Tainan](https://gdg.community.dev/events/details/google-gdg-tainan-presents-build-with-ai-x-wu-yue-chang-tan-suo-vibe-coding-yu-google-gemini-de-wu-xian-ke-neng/) | [`events/bwai-tainan-2026-05-23/`](events/bwai-tainan-2026-05-23/) |
+## Used in workshops
+
+| Date | City | Event | Slides (private) |
+|------|------|-------|------------------|
+| 2026-05-23 | Tainan | [BWAI Tainan — Vibe Coding × Gemini](https://gdg.community.dev/events/details/google-gdg-tainan-presents-build-with-ai-x-wu-yue-chang-tan-suo-vibe-coding-yu-google-gemini-de-wu-xian-ke-neng/) | [`bwai-tainan-2026-05-23`](https://github.com/jimmyliao/bwai-tainan-2026-05-23) (private) |
 
 ## Related links
 
