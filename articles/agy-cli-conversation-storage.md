@@ -111,6 +111,6 @@ the protobuf blobs in `steps`, so it needs decoding rather than a plain query.
 Once you know the storage model, you can build tooling around it — a session
 browser, a "resume my last conversation in this repo" shortcut, backups, or
 cross-machine sync. (That's exactly the adapter I'm adding to my own
-[`ccs`](https://github.com/jimmyliao/agent-cli-sessions) session browser.)
+[`ccs`](https://github.com/jimmyliao/lazyaicli) session browser.)
 
 *Reverse-engineered from agy 1.0.6 on macOS, 2026-06. Paths/IDs are illustrative.*

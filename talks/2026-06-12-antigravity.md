@@ -23,7 +23,7 @@
 - live demo：`agy --help` → `ls conversations/` → `sqlite3 <id>.db .tables`
 
 ## 可選 demo 點子（個人 tooling 連動）
-- `ccs`（[agent-cli-sessions](https://github.com/jimmyliao/agent-cli-sessions)）規劃中的 **agy adapter**：列出/還原 agy session。儲存格式已逆向完（見上文），來得及就做出 `ags` 當 one-more-thing；否則口頭帶過「正在做」+ show 文章。
+- `ccs`（[lazyaicli](https://github.com/jimmyliao/lazyaicli)）規劃中的 **agy adapter**：列出/還原 agy session。儲存格式已逆向完（見上文），來得及就做出 `ags` 當 one-more-thing；否則口頭帶過「正在做」+ show 文章。
 
 ## TODO（talk 前）
 - [ ] 確認 demo 機 agy 版本（restart 後應為 1.0.6）
